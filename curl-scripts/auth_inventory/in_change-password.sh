@@ -1,8 +1,12 @@
 #!/bin/bash
+#  sh curl-scripts/auth_inventory/in_change-password.sh
+
+OLDPW="1234"
+NEWPW="12345"
 
 API="http://localhost:4741"
 URL_PATH="/change-password"
-TOKEN="52037074219eb45a705424a32bb4216f"
+TOKEN="6c41853939a116d65703b46c7fb5e246"
 
 curl "${API}${URL_PATH}/" \
   --include \
@@ -10,7 +14,7 @@ curl "${API}${URL_PATH}/" \
   --header "Authorization: Bearer ${TOKEN}" \
   --header "Content-Type: application/json" \
   --data '{
-    "change-passwords": {
+    "passwords": {
       "old": "'"${OLDPW}"'",
       "new": "'"${NEWPW}"'"
     }

@@ -1,5 +1,10 @@
 #!/bin/bash
 
+NAME="Earings #1"
+DESCRIPTION="Gold green"
+SIZE="small"
+QUANTITY="6"
+TOKEN="3b315a7728d07f4b7ca8c9fdb171db38"
 API="http://localhost:4741"
 URL_PATH="/inventory"
 
@@ -11,9 +16,9 @@ curl "${API}${URL_PATH}" \
   --data '{
     "inventory": {
       "name": "'"${NAME}"'",
-      "discription": "'"${DISCRIPTION}"'",
+      "description": "'"${DESCRIPTION}"'",
       "size": "'"${SIZE}"'",
-      "quantity": "'"${QUANTITY}"'",
+      "quantity": "'"${QUANTITY}"'"
     }
   }'
 

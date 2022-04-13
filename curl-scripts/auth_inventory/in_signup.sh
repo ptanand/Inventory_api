@@ -3,7 +3,7 @@
 #  sh curl-scripts/auth_inventory/in_signup.sh 
 
 EMAIL="test1@test.com"
-PASSWORD="1234"
+PASSWORD="12345"
 API="http://localhost:4741"
 URL_PATH="/sign-up"
 
