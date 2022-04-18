@@ -10,7 +10,7 @@ const inSchema = new mongoose.Schema(
       type: String,
       required: true
     },
-    size: {
+    price: {
       type: String,
       required: true
     },

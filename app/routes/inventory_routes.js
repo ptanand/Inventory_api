@@ -32,6 +32,7 @@ const router = express.Router()
 router.get('/inventory', requireToken, (req, res, next) => {
   Inventory.find()
     .then((inventory) => {
+      // console.log(inventory.toObject)
       // `examples` will be an array of Mongoose documents
       // we want to convert each one to a POJO, so we use `.map` to
       // apply `.toObject` to each one
@@ -102,6 +103,8 @@ router.delete('/inventory/:id', requireToken, (req, res, next) => {
     .then(handle404)
     .then((inventory) => {
       // throw an error if current user doesn't own `example`
+      // console.log(inventory)
+      // console.log(req)
       requireOwnership(req, inventory)
       // delete the example ONLY IF the above didn't throw
       inventory.deleteOne()
